@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>How to create tab window in html using JavaScript and CSS – progrramers</title>
+    <style>
+        *{box-sizing:border-box}
+        body{margin:0;padding: 0;font-family: Verdana, sans-serif}
+        /*---Navbar CSS Starts----*/
+        .header{background-color: #fafafa;color:#434343}
+        .header h1{margin:0;padding: 0;}
+        .navbar{background-color: #0056c7;}
+        .navbar ul{margin:0;list-style-type: none;overflow: hidden;}
+        .navbar ul li{float:left}
+        .navbar a{color:#ffffff;text-decoration: none;display:inline-block;padding:14px 18px;transition: all .3s ease-in-out}
+        .navbar a:hover{background-color: #ffffff;color:#0056c7}
+        /*---Navbar CSS Ends----*/
+
+        .tab-content{min-height:380px;border:5px solid #0056c7;border-top:0;position: relative;overflow: auto;}
+        .tab-content div{margin-left:53px;min-height: 380px;position: absolute}
+        .hide{display: none;}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>How to create tab window in html using JavaScript and CSS – progrramers</h1>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li><a href="#" tab-name="tab-1" class="tab-link">Tab-1</a></li>
+            <li><a href="#" tab-name="tab-2" class="tab-link">Tab-2</a></li>
+            <li><a href="#" tab-name="tab-3" class="tab-link">Tab-3</a></li>
+            <li><a href="#" tab-name="tab-4" class="tab-link">Tab-4</a></li>
+            <li><a href="#" tab-name="tab-5" class="tab-link">Tab-5</a></li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div class="tab tab-1">
+            <h2>Tab-1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+        </div>
+        <div class="tab tab-2 hide">
+            <h2>Tab-2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+        </div>
+        <div class="tab tab-3 hide">
+            <h2>Tab-3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+        </div>
+        <div class="tab tab-4 hide">
+            <h2>Tab-4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+        </div>
+        <div class="tab tab-5 hide">
+            <h2>Tab-5</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni facere quam vel dolorem expedita saepe odit id corrupti facilis reiciendis, esse odio neque repellendus aut eaque dignissimos fugiat labore!</p>
+        </div>
+    </div>
+    <script>
+        var $ = function(_){return document.querySelectorAll(_)}; //donot confuse, this is not jQuery...
+            for(var i=0;i<$('.tab-link').length;i++){
+                $('.tab-link')[i].onclick = function(){
+                //    alert(this.getAttribute("tab-name"));
+                    $('.tab-content>.tab').forEach(element => {
+                        element.classList.add("hide");
+                    });
+                    $('.'+this.getAttribute("tab-name"))[0].classList.remove('hide');
+                }
+            }
+    </script>
+</body>
+</html>
