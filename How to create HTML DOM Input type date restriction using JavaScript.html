@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dynemic minimum and maximum date restriction using JavaScript - pro version coding</title>
+</head>
+<body>
+    <h1>How to create HTML DOM Input type date restriction using JavaScript</h1>
+    <p>Pro version coding example</p>
+    <p>Example of restricting minimum and maximum date using JavaScript 'Min' attributes value</p>
+    <p>Create a function, pass the parameter values and call the function</p>
+    <label for="date">Select Date : </label><input type="date" id="date">
+
+    <script>
+        //don't confuse it is not jQuery:
+        var $$ = function(_){return document.querySelectorAll(_)};
+        /* 'r' object can be parse as server response, for e.g. : e-commerce site maintain warranty one year from date of products sale.
+        minium and maximun can be set as product warranty period from date of sale*/
+        var r = [{name:"min", value:myDate(-3)},{name:"value",value:myDate(0)},{name:"max",value:myDate(3)}];
+        function myDate(e){
+            var n = new Date();
+            var t = new Date(n.getTime() + (e * 24 * 60 * 60 * 1000));  //get time in milisecond
+            var y = t.getFullYear();
+            var m = t.getMonth()+1;;
+            var d = t.getDate();
+            var date =  y.toString().padStart(4, 0)+"-"+m.toString().padStart(2, 0)+"-"+d.toString().padStart(2, 0);
+            return date;
+        } 
+        //creating a function to set Attribute to HTML DOM input   
+        function restric(){
+            //forEach loop for sertting attribute min, value and max value on HTML DOM input
+            r.forEach(function(key) {
+                //target the DOM with QuerySeletorAll using DOM 'id'.
+               $$('#date')[0].setAttribute(key.name, key.value);
+            });
+        }restric(); //calling restric function on load
+        //when HTML DOM get changed then function will be fire it conditions hmatched.
+        $$('#date')[0].onchange = function(){
+            if(this.value < r[0].value || this.value > r[2].value){
+                this.value=r[1].value;
+                alert("This is invalid date selection. Please select the date between "+ r[0].value + " to "+ r[2].value);
+            }else{
+                if(this.getAttribute("min")==undefined ||this.getAttribute("min")==undefined){
+                    alert("Correct Date Selected");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
